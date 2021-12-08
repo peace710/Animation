@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="recyclerview_margin">20dp</dimen>
+    <dimen name="recyclerview_item_text_size">18sp</dimen>
+    <dimen name="recyclerview_item_margin">12dp</dimen>
+
+    <!-- activity scene-->
+    <dimen name="grid_spacing">4dp</dimen>
+</resources>
