@@ -20,6 +20,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/intro"
                 android:text="@string/basic_transition_intro_message"
                 style="@style/Widget.SampleMessage"
                 android:paddingVertical="@dimen/activity_vertical_margin"

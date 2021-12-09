@@ -1,27 +1,31 @@
-package me.peace.animation.basic.transition
+package me.peace.animation.custom.transition
 
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ViewAnimator
+import androidx.appcompat.widget.AppCompatTextView
 import androidx.fragment.app.FragmentTransaction
 import me.peace.animation.R
+import me.peace.animation.basic.transition.BasicTransition
 import me.peace.animation.logger.Log
 import me.peace.animation.logger.LogFragment
 import me.peace.animation.logger.LogWrapper
 import me.peace.animation.logger.MessageOnlyLogFilter
 
-class BasicTransitionActivity : BasicTransition() {
+class CustomTransitionActivity:BasicTransition(){
+
     private var logShown = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basic_transition_main)
         if (savedInstanceState == null) {
             val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-            val fragment = BasicTransitionFragment()
+            val fragment = CustomTransitionFragment()
             transaction.replace(R.id.basic_transition_content, fragment)
             transaction.commit()
         }
+        findViewById<AppCompatTextView>(R.id.intro).text = getString(R.string.custom_transition_intro_message)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

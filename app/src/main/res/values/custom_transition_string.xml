@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="custom_transition_intro_message">
+        <![CDATA[
+
+
+            This sample demonstrates how to create and use a custom Transition.
+
+
+        ]]>
+    </string>
+</resources>

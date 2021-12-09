@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/custom_transition_scene_container">
+
+    <View
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        android:background="#f00"
+        android:id="@+id/view_1"/>
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        android:background="#0f0"/>
+
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        android:background="#00f"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,12 +1,13 @@
 package me.peace.animation.basic.transition
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
 import me.peace.animation.logger.Log
 import me.peace.animation.logger.LogWrapper
 
 
-open class BasicTransition : FragmentActivity() {
+open class BasicTransition : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

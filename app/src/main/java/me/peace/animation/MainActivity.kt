@@ -13,12 +13,13 @@ import androidx.recyclerview.widget.RecyclerView
 import me.peace.animation.activity.scene.ActivitySceneTransition
 import me.peace.animation.basic.transition.BasicTransition
 import me.peace.animation.basic.transition.BasicTransitionActivity
+import me.peace.animation.custom.transition.CustomTransitionActivity
 
 class MainActivity : AppCompatActivity() {
-    private val list = arrayListOf<String>("SceneTransition","BasicTransition")
+    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition")
 
     private val clazz = arrayListOf<Class<*>>(ActivitySceneTransition::class.java,
-        BasicTransitionActivity::class.java)
+        BasicTransitionActivity::class.java,CustomTransitionActivity::class.java)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
