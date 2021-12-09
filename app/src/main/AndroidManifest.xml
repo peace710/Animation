@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".activity.scene.ActivitySceneTransition"/>
         <activity android:name=".activity.scene.DetailActivity"/>
+        <activity android:name=".basic.transition.BasicTransitionActivity"/>
     </application>
 
 </manifest>

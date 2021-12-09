@@ -4,6 +4,14 @@
     <dimen name="recyclerview_item_text_size">18sp</dimen>
     <dimen name="recyclerview_item_margin">12dp</dimen>
 
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
     <!-- activity scene-->
     <dimen name="grid_spacing">4dp</dimen>
+
+    <!-- basic transition -->
+    <dimen name="square_size_normal">50dp</dimen>
+    <dimen name="square_size_expanded">100dp</dimen>
+
 </resources>
