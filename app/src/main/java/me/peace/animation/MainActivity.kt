@@ -14,12 +14,16 @@ import me.peace.animation.activity.scene.ActivitySceneTransition
 import me.peace.animation.basic.transition.BasicTransition
 import me.peace.animation.basic.transition.BasicTransitionActivity
 import me.peace.animation.custom.transition.CustomTransitionActivity
+import me.peace.animation.drawable.animation.DrawableAnimationActivity
 
 class MainActivity : AppCompatActivity() {
-    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition")
+    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation")
 
-    private val clazz = arrayListOf<Class<*>>(ActivitySceneTransition::class.java,
-        BasicTransitionActivity::class.java,CustomTransitionActivity::class.java)
+    private val clazz = arrayListOf<Class<*>>(
+        ActivitySceneTransition::class.java,
+        BasicTransitionActivity::class.java,
+        CustomTransitionActivity::class.java,
+        DrawableAnimationActivity::class.java)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
