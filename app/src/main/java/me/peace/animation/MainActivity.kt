@@ -15,15 +15,18 @@ import me.peace.animation.basic.transition.BasicTransition
 import me.peace.animation.basic.transition.BasicTransitionActivity
 import me.peace.animation.custom.transition.CustomTransitionActivity
 import me.peace.animation.drawable.animation.DrawableAnimationActivity
+import me.peace.animation.grid.pager.Grid2PagerActivity
 
 class MainActivity : AppCompatActivity() {
-    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation")
+    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation","Grid2Pager")
 
     private val clazz = arrayListOf<Class<*>>(
         ActivitySceneTransition::class.java,
         BasicTransitionActivity::class.java,
         CustomTransitionActivity::class.java,
-        DrawableAnimationActivity::class.java)
+        DrawableAnimationActivity::class.java,
+        Grid2PagerActivity::class.java
+        )
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -25,6 +25,7 @@
         <activity android:name=".basic.transition.BasicTransitionActivity"/>
         <activity android:name=".custom.transition.CustomTransitionActivity"/>
         <activity android:name=".drawable.animation.DrawableAnimationActivity"/>
+        <activity android:name=".grid.pager.Grid2PagerActivity"/>
     </application>
 
 </manifest>
