@@ -62,7 +62,7 @@ class InterpolatorActivity : BasicTransition() {
         logWrapper.next = msgFilter
 
         val logFragment: LogFragment? = supportFragmentManager
-            .findFragmentById(R.id.basic_transition_log) as LogFragment?
+            .findFragmentById(R.id.interpolator_log) as LogFragment?
         msgFilter.next = logFragment?.logView
         Log.i(TAG, "Ready")
     }
