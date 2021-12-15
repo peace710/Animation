@@ -32,7 +32,7 @@ class InterpolatorActivity : BasicTransition() {
 
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {
         val logToggle = menu.findItem(R.id.menu_toggle_log)
-        logToggle.isVisible = findViewById<ViewAnimator>(R.id.basic_transition_output) is ViewAnimator
+        logToggle.isVisible = findViewById<ViewAnimator>(R.id.interpolator_output) is ViewAnimator
         logToggle.setTitle(if (logShown) R.string.sample_hide_log else R.string.sample_show_log)
         return super.onPrepareOptionsMenu(menu)
     }
@@ -41,7 +41,7 @@ class InterpolatorActivity : BasicTransition() {
         when (item.itemId) {
             R.id.menu_toggle_log -> {
                 logShown = !logShown
-                val output = findViewById<ViewAnimator>(R.id.basic_transition_output)
+                val output = findViewById<ViewAnimator>(R.id.interpolator_output)
                 if (logShown) {
                     output.displayedChild = 1
                 } else {
