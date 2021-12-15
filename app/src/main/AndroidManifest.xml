@@ -26,6 +26,7 @@
         <activity android:name=".custom.transition.CustomTransitionActivity"/>
         <activity android:name=".drawable.animation.DrawableAnimationActivity"/>
         <activity android:name=".grid.pager.Grid2PagerActivity"/>
+        <activity android:name=".interpolator.InterpolatorActivity"/>
     </application>
 
 </manifest>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="@dimen/activity_vertical_margin"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/interpolator_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/interpolator_spinner"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:text="@string/interpolator" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/interpolator_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/interpolator_label" />
+
+
+        <SeekBar
+            android:id="@+id/interpolator_duration_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/interpolator_duration_label"
+            android:max="5000" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/interpolator_duration_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/interpolator_spinner"
+            android:gravity="center_vertical" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/interpolator_animate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/interpolator_duration_seek"
+            android:layout_centerHorizontal="true"
+            android:text="@string/interpolator_animate" />
+
+        <View
+            android:id="@+id/interpolator_square"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/interpolator_animate_button"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@color/purple"
+            android:minHeight="100dp"
+            android:minWidth="100dp" />
+
+    </RelativeLayout>
+
+</ScrollView>
