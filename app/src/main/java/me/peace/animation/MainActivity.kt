@@ -18,9 +18,10 @@ import me.peace.animation.drawable.animation.DrawableAnimationActivity
 import me.peace.animation.effect.basic.EffectActivity
 import me.peace.animation.grid.pager.Grid2PagerActivity
 import me.peace.animation.interpolator.InterpolatorActivity
+import me.peace.motion.MotionActivity
 
 class MainActivity : AppCompatActivity() {
-    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation","Grid2Pager","Interpolator","Effect")
+    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation","Grid2Pager","Interpolator","Effect","MotionBasic01")
 
     private val clazz = arrayListOf<Class<*>>(
         ActivitySceneTransition::class.java,
@@ -29,7 +30,8 @@ class MainActivity : AppCompatActivity() {
         DrawableAnimationActivity::class.java,
         Grid2PagerActivity::class.java,
         InterpolatorActivity::class.java,
-        EffectActivity::class.java
+        EffectActivity::class.java,
+        MotionActivity::class.java
         )
 
 
@@ -52,7 +54,10 @@ class MainActivity : AppCompatActivity() {
             val text = holder.itemView.findViewById<AppCompatTextView>(R.id.text)
             text.text = list[position]
             text.setOnClickListener {
-                context?.startActivity(Intent(context,clazz[position]))
+                when {
+                    position > 6 -> MotionActivity.start(context,clazz[position],R.layout.motion_01_basic)
+                    else -> context?.startActivity(Intent(context,clazz[position]))
+                }
             }
         }
 

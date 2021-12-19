@@ -28,6 +28,7 @@
         <activity android:name=".grid.pager.Grid2PagerActivity"/>
         <activity android:name=".interpolator.InterpolatorActivity"/>
         <activity android:name=".effect.basic.EffectActivity" />
+        <activity android:name="me.peace.motion.MotionActivity"/>
     </application>
 
 </manifest>
