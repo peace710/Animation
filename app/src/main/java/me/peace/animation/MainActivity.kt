@@ -21,7 +21,7 @@ import me.peace.animation.interpolator.InterpolatorActivity
 import me.peace.motion.MotionActivity
 
 class MainActivity : AppCompatActivity() {
-    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation","Grid2Pager","Interpolator","Effect","MotionBasic01")
+    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation","Grid2Pager","Interpolator","Effect","MotionBasic01","MotionBasic02")
 
     private val clazz = arrayListOf<Class<*>>(
         ActivitySceneTransition::class.java,
@@ -31,19 +31,25 @@ class MainActivity : AppCompatActivity() {
         Grid2PagerActivity::class.java,
         InterpolatorActivity::class.java,
         EffectActivity::class.java,
+        MotionActivity::class.java,
         MotionActivity::class.java
         )
 
+    private val layout =  arrayListOf<Int>(R.layout.motion_01_basic,R.layout.motion_02_basic)
+
+    companion object{
+        private val MOTION_START = 7
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = ItemAdapter(this,list,clazz)
+        recyclerView.adapter = ItemAdapter(this,list,clazz,layout)
     }
 
-    class ItemAdapter(private val context: Context, private val list:List<String>,private val clazz:List<Class<*>>):RecyclerView.Adapter<ItemViewHolder>(){
+    class ItemAdapter(private val context: Context, private val list:List<String>,private val clazz:List<Class<*>>,private val layout:List<Int>):RecyclerView.Adapter<ItemViewHolder>(){
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
             val view =
                 LayoutInflater.from(context).inflate(R.layout.recyclerview_item, parent, false)
@@ -55,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             text.text = list[position]
             text.setOnClickListener {
                 when {
-                    position > 6 -> MotionActivity.start(context,clazz[position],R.layout.motion_01_basic)
+                    position >= MOTION_START -> MotionActivity.start(context,clazz[position],layout[position - MOTION_START])
                     else -> context?.startActivity(Intent(context,clazz[position]))
                 }
             }
