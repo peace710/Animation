@@ -21,7 +21,7 @@ import me.peace.animation.interpolator.InterpolatorActivity
 import me.peace.motion.MotionActivity
 
 class MainActivity : AppCompatActivity() {
-    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation","Grid2Pager","Interpolator","Effect","MotionBasic01","MotionBasic02")
+    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation","Grid2Pager","Interpolator","Effect","MotionBasic01","MotionBasic02","MotionBasic02AutoCompleteFalse")
 
     private val clazz = arrayListOf<Class<*>>(
         ActivitySceneTransition::class.java,
@@ -32,13 +32,14 @@ class MainActivity : AppCompatActivity() {
         InterpolatorActivity::class.java,
         EffectActivity::class.java,
         MotionActivity::class.java,
+        MotionActivity::class.java,
         MotionActivity::class.java
         )
 
-    private val layout =  arrayListOf<Int>(R.layout.motion_01_basic,R.layout.motion_02_basic)
+    private val layout =  arrayListOf<Int>(R.layout.motion_01_basic,R.layout.motion_02_basic,R.layout.motion_02_basic_autocomplete_false)
 
     companion object{
-        private val MOTION_START = 7
+        private const val MOTION_START = 7
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
