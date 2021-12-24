@@ -21,7 +21,20 @@ import me.peace.animation.interpolator.InterpolatorActivity
 import me.peace.motion.MotionActivity
 
 class MainActivity : AppCompatActivity() {
-    private val list = arrayListOf<String>("SceneTransition","BasicTransition","CustomTransition","DrawableAnimation","Grid2Pager","Interpolator","Effect","MotionBasic01","MotionBasic02","MotionBasic02AutoCompleteFalse","Motion03CustomAttribute")
+    private val list = arrayListOf<String>(
+        "SceneTransition",
+        "BasicTransition",
+        "CustomTransition",
+        "DrawableAnimation",
+        "Grid2Pager",
+        "Interpolator",
+        "Effect",
+        "MotionBasic01",
+        "MotionBasic02",
+        "MotionBasic02AutoCompleteFalse",
+        "Motion03CustomAttribute",
+        "Motion04ImageFilter"
+    )
 
     private val clazz = arrayListOf<Class<*>>(
         ActivitySceneTransition::class.java,
@@ -34,10 +47,16 @@ class MainActivity : AppCompatActivity() {
         MotionActivity::class.java,
         MotionActivity::class.java,
         MotionActivity::class.java,
+        MotionActivity::class.java,
         MotionActivity::class.java
         )
 
-    private val layout =  arrayListOf<Int>(R.layout.motion_01_basic,R.layout.motion_02_basic,R.layout.motion_02_basic_autocomplete_false,R.layout.motion_03_custom_attribute)
+    private val layout =  arrayListOf<Int>(R.layout.motion_01_basic,
+        R.layout.motion_02_basic,
+        R.layout.motion_02_basic_autocomplete_false,
+        R.layout.motion_03_custom_attribute,
+        R.layout.motion_04_imagefilter
+    )
 
     companion object{
         private const val MOTION_START = 7

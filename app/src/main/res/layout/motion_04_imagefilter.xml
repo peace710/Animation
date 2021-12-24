@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/motion_layout"
+    app:layoutDescription="@xml/scene_04"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/image"
+        android:background="@color/color"
+        android:src="@drawable/roard"
+        app:altSrc="@drawable/hoford">
+
+    </androidx.constraintlayout.utils.widget.ImageFilterView>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
