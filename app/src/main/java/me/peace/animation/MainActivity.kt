@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         "MotionBasic02",
         "MotionBasic02AutoCompleteFalse",
         "Motion03CustomAttribute",
-        "Motion04ImageFilter"
+        "Motion04ImageFilter",
+        "Motion05ImageFilter"
     )
 
     private val clazz = arrayListOf<Class<*>>(
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         MotionActivity::class.java,
         MotionActivity::class.java,
         MotionActivity::class.java,
+        MotionActivity::class.java,
         MotionActivity::class.java
         )
 
@@ -55,7 +57,8 @@ class MainActivity : AppCompatActivity() {
         R.layout.motion_02_basic,
         R.layout.motion_02_basic_autocomplete_false,
         R.layout.motion_03_custom_attribute,
-        R.layout.motion_04_imagefilter
+        R.layout.motion_04_imagefilter,
+        R.layout.motion_05_imagefilter
     )
 
     companion object{
