@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         "Motion03CustomAttribute",
         "Motion04ImageFilter",
         "Motion05ImageFilter",
-        "Motion06FrameKeySet"
+        "Motion06FrameKeySet",
+        "Motion07FrameKeySet"
     )
 
     private val clazz = arrayListOf<Class<*>>(
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         MotionActivity::class.java,
         MotionActivity::class.java,
         MotionActivity::class.java,
+        MotionActivity::class.java,
         MotionActivity::class.java
         )
 
@@ -61,7 +63,8 @@ class MainActivity : AppCompatActivity() {
         R.layout.motion_03_custom_attribute,
         R.layout.motion_04_imagefilter,
         R.layout.motion_05_imagefilter,
-        R.layout.motion_06_keyframe
+        R.layout.motion_06_keyframe,
+        R.layout.motion_07_keyframe
     )
 
     companion object{
