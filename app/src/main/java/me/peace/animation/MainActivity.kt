@@ -37,7 +37,10 @@ class MainActivity : AppCompatActivity() {
         "Motion05ImageFilter",
         "Motion06FrameKeySet",
         "Motion07FrameKeySet",
-        "Motion08Cycle"
+        "Motion08Cycle",
+        "Motion09Coordinator",
+        "Motion10Coordinator",
+        "Motion11Coordinator"
     )
 
     private val clazz = arrayListOf<Class<*>>(
@@ -48,6 +51,9 @@ class MainActivity : AppCompatActivity() {
         Grid2PagerActivity::class.java,
         InterpolatorActivity::class.java,
         EffectActivity::class.java,
+        MotionActivity::class.java,
+        MotionActivity::class.java,
+        MotionActivity::class.java,
         MotionActivity::class.java,
         MotionActivity::class.java,
         MotionActivity::class.java,
@@ -67,7 +73,10 @@ class MainActivity : AppCompatActivity() {
         R.layout.motion_05_imagefilter,
         R.layout.motion_06_keyframe,
         R.layout.motion_07_keyframe,
-        R.layout.motion_08_cycle
+        R.layout.motion_08_cycle,
+        R.layout.motion_09_coordinatorlayout,
+        R.layout.motion_10_coordinatorlayout,
+        R.layout.motion_11_coordinatorlayout
     )
 
     companion object{
