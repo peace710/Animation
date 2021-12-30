@@ -41,7 +41,8 @@ class MainActivity : AppCompatActivity() {
         "Motion09Coordinator",
         "Motion10Coordinator",
         "Motion11Coordinator",
-        "Motion12Drawer"
+        "Motion12Drawer",
+        "Motion13Drawer"
     )
 
     private val clazz = arrayListOf<Class<*>>(
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         Grid2PagerActivity::class.java,
         InterpolatorActivity::class.java,
         EffectActivity::class.java,
+        MotionActivity::class.java,
         MotionActivity::class.java,
         MotionActivity::class.java,
         MotionActivity::class.java,
@@ -79,7 +81,8 @@ class MainActivity : AppCompatActivity() {
         R.layout.motion_09_coordinatorlayout,
         R.layout.motion_10_coordinatorlayout,
         R.layout.motion_11_coordinatorlayout,
-        R.layout.motion_12_drawerlayout
+        R.layout.motion_12_drawerlayout,
+        R.layout.motion_13_drawerlayout
     )
 
     companion object{
