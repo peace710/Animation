@@ -24,7 +24,7 @@ class MotionActivity:AppCompatActivity() {
         }
     }
 
-    private lateinit var container:MotionLayout
+    private lateinit var container:View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,11 +37,11 @@ class MotionActivity:AppCompatActivity() {
         } else{
             MotionLayout.DEBUG_SHOW_NONE
         }
-        container.setDebugMode(debug)
+        (container as? MotionLayout)?.setDebugMode(debug)
     }
 
     fun changeState(v: View?) {
-        val motionLayout = container?: return
+        val motionLayout = container as? MotionLayout?: return
         if (motionLayout.progress > 0.5f) {
             motionLayout.transitionToStart()
         } else {
