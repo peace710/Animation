@@ -19,6 +19,7 @@ import me.peace.animation.effect.basic.EffectActivity
 import me.peace.animation.grid.pager.Grid2PagerActivity
 import me.peace.animation.interpolator.InterpolatorActivity
 import me.peace.animation.viewpager.ViewPagerActivity
+import me.peace.animation.viewpager.ViewPagerActivity2
 import me.peace.motion.MotionActivity
 
 class MainActivity : AppCompatActivity() {
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         "Motion14SlidePanel",
         "Motion15Parallax",
         "Motion16ViewPager",
+        "Motion16ViewPagerLottie",
         "Motion17ComplexMotion"
     )
 
@@ -75,6 +77,7 @@ class MainActivity : AppCompatActivity() {
         MotionActivity::class.java,
         MotionActivity::class.java,
         ViewPagerActivity::class.java,
+        ViewPagerActivity2::class.java,
         MotionActivity::class.java
         )
 
@@ -95,12 +98,14 @@ class MainActivity : AppCompatActivity() {
         R.layout.motion_14_side_panel,
         R.layout.motion_15_parallax,
         R.layout.motion_16_viewpager,
+        R.layout.motion_23_viewpager,
         R.layout.motion_17_coordination
     )
 
     companion object{
         private const val MOTION_START = 7
         private const val MOTION_VIEW_PAGE = 23
+        private const val MOTION_VIEW_PAGE_LOTTIE = 24
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -123,6 +128,7 @@ class MainActivity : AppCompatActivity() {
             text.text = list[position]
             text.setOnClickListener {
                 when {
+                    position == MOTION_VIEW_PAGE_LOTTIE -> ViewPagerActivity2.start(context,clazz[position],layout[position - MOTION_START])
                     position == MOTION_VIEW_PAGE -> ViewPagerActivity.start(context,clazz[position],layout[position - MOTION_START])
                     position >= MOTION_START -> MotionActivity.start(context,clazz[position],layout[position - MOTION_START])
                     else -> context?.startActivity(Intent(context,clazz[position]))
