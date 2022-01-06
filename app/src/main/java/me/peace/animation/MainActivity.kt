@@ -51,7 +51,8 @@ class MainActivity : AppCompatActivity() {
         "Motion16ViewPagerLottie",
         "Motion17ComplexMotion",
         "Motion18ComplexMotion",
-        "Motion19ComplexMotion"
+        "Motion19ComplexMotion",
+        "Motion20Reveal"
     )
 
     private val clazz = arrayListOf<Class<*>>(
@@ -82,6 +83,7 @@ class MainActivity : AppCompatActivity() {
         ViewPagerActivity2::class.java,
         MotionActivity::class.java,
         MotionActivity::class.java,
+        MotionActivity::class.java,
         MotionActivity::class.java
         )
 
@@ -105,7 +107,8 @@ class MainActivity : AppCompatActivity() {
         R.layout.motion_23_viewpager,
         R.layout.motion_17_coordination,
         R.layout.motion_18_coordination,
-        R.layout.motion_19_coordination
+        R.layout.motion_19_coordination,
+        R.layout.motion_20_reveal
     )
 
     companion object{
