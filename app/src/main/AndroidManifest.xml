@@ -31,6 +31,7 @@
         <activity android:name="me.peace.motion.MotionActivity"/>
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".viewpager.ViewPagerActivity2" />
+        <activity android:name=".fragment.FragmentMotionActivity" />
     </application>
 
 </manifest>

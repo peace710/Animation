@@ -16,6 +16,7 @@ import me.peace.animation.basic.transition.BasicTransitionActivity
 import me.peace.animation.custom.transition.CustomTransitionActivity
 import me.peace.animation.drawable.animation.DrawableAnimationActivity
 import me.peace.animation.effect.basic.EffectActivity
+import me.peace.animation.fragment.FragmentMotionActivity
 import me.peace.animation.grid.pager.Grid2PagerActivity
 import me.peace.animation.interpolator.InterpolatorActivity
 import me.peace.animation.viewpager.ViewPagerActivity
@@ -52,7 +53,8 @@ class MainActivity : AppCompatActivity() {
         "Motion17ComplexMotion",
         "Motion18ComplexMotion",
         "Motion19ComplexMotion",
-        "Motion20Reveal"
+        "Motion20Reveal",
+        "Motion21Fragment"
     )
 
     private val clazz = arrayListOf<Class<*>>(
@@ -84,7 +86,8 @@ class MainActivity : AppCompatActivity() {
         MotionActivity::class.java,
         MotionActivity::class.java,
         MotionActivity::class.java,
-        MotionActivity::class.java
+        MotionActivity::class.java,
+        FragmentMotionActivity::class.java
         )
 
     private val layout =  arrayListOf<Int>(R.layout.motion_01_basic,
@@ -108,13 +111,15 @@ class MainActivity : AppCompatActivity() {
         R.layout.motion_17_coordination,
         R.layout.motion_18_coordination,
         R.layout.motion_19_coordination,
-        R.layout.motion_20_reveal
+        R.layout.motion_20_reveal,
+        R.layout.activity_fragment_main
     )
 
     companion object{
         private const val MOTION_START = 7
         private const val MOTION_VIEW_PAGE = 23
         private const val MOTION_VIEW_PAGE_LOTTIE = 24
+        private const val MOTION_FRAGMENT_MAIN = 29
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -137,6 +142,7 @@ class MainActivity : AppCompatActivity() {
             text.text = list[position]
             text.setOnClickListener {
                 when {
+                    position == MOTION_FRAGMENT_MAIN -> FragmentMotionActivity.start(context,clazz[position],layout[position - MOTION_START])
                     position == MOTION_VIEW_PAGE_LOTTIE -> ViewPagerActivity2.start(context,clazz[position],layout[position - MOTION_START])
                     position == MOTION_VIEW_PAGE -> ViewPagerActivity.start(context,clazz[position],layout[position - MOTION_START])
                     position >= MOTION_START -> MotionActivity.start(context,clazz[position],layout[position - MOTION_START])
