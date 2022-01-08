@@ -11,7 +11,6 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import me.peace.animation.activity.scene.ActivitySceneTransition
-import me.peace.animation.basic.transition.BasicTransition
 import me.peace.animation.basic.transition.BasicTransitionActivity
 import me.peace.animation.custom.transition.CustomTransitionActivity
 import me.peace.animation.drawable.animation.DrawableAnimationActivity
@@ -22,7 +21,8 @@ import me.peace.animation.grid.pager.Grid2PagerActivity
 import me.peace.animation.interpolator.InterpolatorActivity
 import me.peace.animation.viewpager.ViewPagerActivity
 import me.peace.animation.viewpager.ViewPagerActivity2
-import me.peace.motion.MotionActivity
+import me.peace.animation.motion.MotionActivity
+import me.peace.animation.youtube.YouTubeActivity
 
 class MainActivity : AppCompatActivity() {
     private val list = arrayListOf<String>(
@@ -56,7 +56,8 @@ class MainActivity : AppCompatActivity() {
         "Motion19ComplexMotion",
         "Motion20Reveal",
         "Motion21Fragment",
-        "Motion22Fragment"
+        "Motion22Fragment",
+        "Motion24Youtube"
     )
 
     private val clazz = arrayListOf<Class<*>>(
@@ -90,7 +91,8 @@ class MainActivity : AppCompatActivity() {
         MotionActivity::class.java,
         MotionActivity::class.java,
         FragmentMotionActivity::class.java,
-        FragmentMotionActivity2::class.java
+        FragmentMotionActivity2::class.java,
+        YouTubeActivity::class.java
         )
 
     private val layout =  arrayListOf<Int>(R.layout.motion_01_basic,
@@ -116,7 +118,8 @@ class MainActivity : AppCompatActivity() {
         R.layout.motion_19_coordination,
         R.layout.motion_20_reveal,
         R.layout.activity_fragment_main,
-        R.layout.activity_fragment_main
+        R.layout.activity_fragment_main,
+        R.layout.motion_24_youtube
     )
 
     companion object{
@@ -125,6 +128,7 @@ class MainActivity : AppCompatActivity() {
         private const val MOTION_VIEW_PAGE_LOTTIE = 24
         private const val MOTION_FRAGMENT_MAIN = 29
         private const val MOTION_FRAGMENT_LIST = 30
+        private const val MOTION_YOUTUBE = 31
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -147,6 +151,7 @@ class MainActivity : AppCompatActivity() {
             text.text = list[position]
             text.setOnClickListener {
                 when {
+                    position == MOTION_YOUTUBE -> YouTubeActivity.start(context,clazz[position],layout[position - MOTION_START])
                     position == MOTION_FRAGMENT_LIST -> FragmentMotionActivity2.start(context,clazz[position],layout[position - MOTION_START])
                     position == MOTION_FRAGMENT_MAIN -> FragmentMotionActivity.start(context,clazz[position],layout[position - MOTION_START])
                     position == MOTION_VIEW_PAGE_LOTTIE -> ViewPagerActivity2.start(context,clazz[position],layout[position - MOTION_START])

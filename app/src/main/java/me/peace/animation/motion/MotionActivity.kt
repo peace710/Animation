@@ -1,4 +1,4 @@
-package me.peace.motion
+package me.peace.animation.motion
 
 import android.content.Context
 import android.content.Intent
