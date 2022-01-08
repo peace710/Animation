@@ -57,7 +57,8 @@ class MainActivity : AppCompatActivity() {
         "Motion20Reveal",
         "Motion21Fragment",
         "Motion22Fragment",
-        "Motion24Youtube"
+        "Motion24Youtube",
+        "Motion25KeyTrigger"
     )
 
     private val clazz = arrayListOf<Class<*>>(
@@ -92,7 +93,8 @@ class MainActivity : AppCompatActivity() {
         MotionActivity::class.java,
         FragmentMotionActivity::class.java,
         FragmentMotionActivity2::class.java,
-        YouTubeActivity::class.java
+        YouTubeActivity::class.java,
+        MotionActivity::class.java
         )
 
     private val layout =  arrayListOf<Int>(R.layout.motion_01_basic,
@@ -119,7 +121,8 @@ class MainActivity : AppCompatActivity() {
         R.layout.motion_20_reveal,
         R.layout.activity_fragment_main,
         R.layout.activity_fragment_main,
-        R.layout.motion_24_youtube
+        R.layout.motion_24_youtube,
+        R.layout.motion_25_keytrigger
     )
 
     companion object{
