@@ -18,6 +18,7 @@ import me.peace.animation.effect.basic.EffectActivity
 import me.peace.animation.fragment.FragmentMotionActivity
 import me.peace.animation.fragment.FragmentMotionActivity2
 import me.peace.animation.grid.pager.Grid2PagerActivity
+import me.peace.animation.histogram.HistogramActivity
 import me.peace.animation.interpolator.InterpolatorActivity
 import me.peace.animation.viewpager.ViewPagerActivity
 import me.peace.animation.viewpager.ViewPagerActivity2
@@ -59,7 +60,8 @@ class MainActivity : AppCompatActivity() {
         "Motion22Fragment",
         "Motion24Youtube",
         "Motion25KeyTrigger",
-        "Motion26Multistate"
+        "Motion26Multistate",
+        "Motion27Histogram"
     )
 
     private val clazz = arrayListOf<Class<*>>(
@@ -96,7 +98,8 @@ class MainActivity : AppCompatActivity() {
         FragmentMotionActivity2::class.java,
         YouTubeActivity::class.java,
         MotionActivity::class.java,
-        MotionActivity::class.java
+        MotionActivity::class.java,
+        HistogramActivity::class.java
         )
 
     private val layout =  arrayListOf<Int>(R.layout.motion_01_basic,
@@ -125,7 +128,8 @@ class MainActivity : AppCompatActivity() {
         R.layout.activity_fragment_main,
         R.layout.motion_24_youtube,
         R.layout.motion_25_keytrigger,
-        R.layout.motion_26_multistate
+        R.layout.motion_26_multistate,
+        R.layout.histogram_layout
     )
 
     companion object{
@@ -135,6 +139,7 @@ class MainActivity : AppCompatActivity() {
         private const val MOTION_FRAGMENT_MAIN = 29
         private const val MOTION_FRAGMENT_LIST = 30
         private const val MOTION_YOUTUBE = 31
+        private const val MOTION_HISTOGRAM = 34
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -157,6 +162,7 @@ class MainActivity : AppCompatActivity() {
             text.text = list[position]
             text.setOnClickListener {
                 when {
+                    position == MOTION_HISTOGRAM -> HistogramActivity.start(context,clazz[position],layout[position - MOTION_START])
                     position == MOTION_YOUTUBE -> YouTubeActivity.start(context,clazz[position],layout[position - MOTION_START])
                     position == MOTION_FRAGMENT_LIST -> FragmentMotionActivity2.start(context,clazz[position],layout[position - MOTION_START])
                     position == MOTION_FRAGMENT_MAIN -> FragmentMotionActivity.start(context,clazz[position],layout[position - MOTION_START])
